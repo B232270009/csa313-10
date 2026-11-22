@@ -9,3 +9,6 @@ starter.zip
 starter/
 lab10-dataflow/
 __MACOSX/
+
+__pycache__/
+*.pyc
