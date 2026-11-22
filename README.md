@@ -332,6 +332,10 @@ python3 scripts/analyze_du.py
 python3 scripts/verify_evidence.py
 ```
 
+Шинэ хавтаст локал clone хийгээд `mvn clean verify` дахин ажиллуулахад
+13 тест амжилттай, Branch 16/16 гарсан. Нотолгоо:
+[clone build](results/clone-verify.txt), [clone CSV](results/clone-jacoco.csv).
+
 CFG-г дахин зурах команд `python3 scripts/draw_cfg.py` (Pillow хэрэгтэй).
 HTML тайлан нь `target/site/jacoco/index.html`; target нь Git-д орохгүй.
 Багшийн DOCX/PDF, starter.zip болон задласан starter хавтсыг Git-ийн

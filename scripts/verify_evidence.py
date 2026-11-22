@@ -20,10 +20,12 @@ def coverage(name,expected):
 
 for name,total,fail in [('mvn-verify-alldefs.txt',5,0),('mvn-verify-final.txt',13,0),
                        ('mvn-test-M1.txt',13,3),('mvn-test-M2.txt',13,1),
-                       ('mvn-test-M3.txt',13,0),('mvn-verify-branch100-not-du.txt',8,0)]:
+                       ('mvn-test-M3.txt',13,0),('mvn-verify-branch100-not-du.txt',8,0),
+                       ('clone-verify.txt',13,0)]:
     totals(name,(total,fail,0,0),fail==0)
 coverage('jacoco-alldefs.csv',(3,13,2,22))
 coverage('jacoco-final.csv',(0,16,1,23))
+coverage('clone-jacoco.csv',(0,16,1,23))
 coverage('jacoco-branch100-not-du.csv',(0,16,1,23))
 source=ROOT/'src/main/java/mn/edu/must/sqat/DataFlowTargets.java'
 original=subprocess.check_output(['git','show','1c1119e:starter/lab10-dataflow/src/main/java/mn/edu/must/sqat/DataFlowTargets.java'],cwd=ROOT)
