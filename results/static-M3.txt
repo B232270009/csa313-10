@@ -1,0 +1,1 @@
+src/main/java/mn/edu/must/sqat/DataFlowTargets.java:49: warning: local variable 'total' is never read [UnusedLocalVariable]
