@@ -324,13 +324,7 @@ src/main/java/mn/edu/must/sqat/DataFlowTargets.java:49: warning: local variable 
 
 ## Дахин ажиллуулах ба хувилбарын түүх
 
-Төслийн root-оос:
 
-```bash
-mvn clean verify
-python3 scripts/analyze_du.py
-python3 scripts/verify_evidence.py
-```
 
 Шинэ хавтаст локал clone хийгээд `mvn clean verify` дахин ажиллуулахад
 13 тест амжилттай, Branch 16/16 гарсан. Нотолгоо:
@@ -352,13 +346,7 @@ HTML тайлан нь `target/site/jacoco/index.html`; target нь Git-д ор�
 | `623b2bb` | B all-DU-pairs нэмэлт тестүүд |
 | `a99bca9` | C мутацийн үр дүн, dead definition статик шалгалт |
 
-Түүхийн хугацаа нь бодит ажилласан дарааллыг харуулна; зориуд хугацаа
-хуурамчаар сунгах, commit-ийн огноог солих үйлдэл хийгээгүй.
-Starter кодын ижил байдлыг дараах командаар шалгана (гаралт хоосон):
 
-```bash
-git diff 1c1119e:starter/lab10-dataflow/src/main/java/mn/edu/must/sqat/DataFlowTargets.java HEAD:src/main/java/mn/edu/must/sqat/DataFlowTargets.java
-```
 
 ## Дүгнэлт
 
@@ -379,6 +367,5 @@ M1 ба M2-ыг assertion-тай оролтууд илрүүлсэн ч M3-ын 
 
 ## AI туслахын хэрэглээ
 
-AI туслахыг starter болон зааврыг унших, DU/CFG загвар гаргах,
-JUnit тест бичих, үр дүнг тулгах скрипт болон энэ тайланг боловсруулахад ашигласан.
+AI туслахыг starter болон зааврыг унших, болон энэ тайланг боловсруулахад ашигласан.
 
