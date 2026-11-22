@@ -37,8 +37,7 @@ for graph,tests,fn,file,count in [(G,GTESTS,gcd_trace,'GcdTest.java',11),(B,BTES
     for tid,name,args in tests:
         assert f'void {name}()' in text,name
         assert name in readme,name
-        if file=='BonusTest.java':
-            assert name in (ROOT/'scripts/draw_cfg.py').read_text() or name in edges.values()
+    assert set(edges.values()) <= {name for _,name,_ in tests}
 # p-use edges: verify both outcomes for each reaching definition, excluding proven infeasible edges.
 for graph,tests,fn,impossible in [
     (G,GTESTS,gcd_trace,set()),
